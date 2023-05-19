@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>EXC_UHL Ver_0.1</title>
+</head>
+
+<body>
+    <!--Main Navigation-->
+    <header>
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4" id="sidebar-menu">
+                    <a href="#" class="list-group-item list-group-item-action py-2 ripple active"
+                        id="binary-group-spawn">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Sinh nhị phân</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action py-2 ripple" id="child-group-spawn">
+                        <i class="fas fa-lock fa-fw me-3"></i><span>Sinh tập con</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+
+        <!-- Navbar -->
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">
+                    <span class="bg-white mx-1 my-1">ZORD CODED THIS</span>
+                </a>
+                <!-- Search form -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main style="margin-top: 58px;">
+        <div class="container pt-4">
+            <!--Main layout-->
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="greeting-quote">
+                                        Hello, đây là đếm dãy nhị phân với n phần tử
+                                    </p>
+                                    <form class="mx-1 mx-md-4" action="#">
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <input type="number" id="inp_n" class="form-control" required />
+                                                <label class="form-label" for="inp_n">Nhập n</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            <button type="button" class="btn btn-primary btn-lg" id="solve-btn"
+                                                value="submit">Chạy</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                        class="img-fluid" alt="Sample image">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="result-box" class="hidden">
+                <div class="row d-flex justify-content-center align-items-center h-100 py-2">
+                    <div class="col-lg-12 col-xl-11">
+                        <div class="card text-black" style="border-radius: 25px;">
+                            <div class="card-body p-md-5">
+                                <div class="row justify-content-center">
+                                    <span class="text-center text-justify h1 fw-bold">Kết quả</span>
+                                    <div class="text-center text-justify">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">p(b)</th>
+                                                    <th scope="col">Binaries</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="result">
+                                                
+                                            </tbody>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
